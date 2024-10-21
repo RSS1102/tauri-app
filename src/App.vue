@@ -22,7 +22,13 @@ onMounted(async () => {
   ])
 
   const menu = await Menu.new({
-    items: menuItems
+    items: [
+      {
+        id: "file",
+        text: "File",
+        items: menuItems,
+      }
+    ]
   });
   await menu.setAsAppMenu();
 })
